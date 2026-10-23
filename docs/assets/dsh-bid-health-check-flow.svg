@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="dsh-bid-health-check workflow">
+<title>dsh-bid-health-check workflow</title>
+<rect width="1200" height="360" rx="18" fill="#0d1117"/>
+<text x="60" y="58" fill="#f0f6fc" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700">dsh-bid-health-check</text>
+<text x="60" y="92" fill="#8b949e" font-family="ui-monospace,monospace" font-size="16">DeepSeek Harness plugin</text>
+<line x1="60" y1="118" x2="1140" y2="118" stroke="#30363d"/>
+<rect x="120" y="150" width="240" height="140" rx="14" fill="#161b22" stroke="#2563eb" stroke-width="2"/>
+<rect x="213" y="185" width="54" height="66" rx="8" fill="none" stroke="#2563eb" stroke-width="3"/><path d="M226 205h28M226 217h28M226 229h18" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<circle cx="330" cy="270" r="13" fill="#2563eb"/><text x="330" y="276" fill="#0d1117" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14" font-weight="700">1</text>
+<path d="M368 220h64" stroke="#2563eb" stroke-width="3"/><path d="M422 213l10 7-10 7" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<rect x="480" y="150" width="240" height="140" rx="14" fill="#161b22" stroke="#2563eb" stroke-width="2"/>
+<path d="M577 203h46M577 219h46M577 235h46" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/><circle cx="591" cy="203" r="6" fill="#2563eb"/><circle cx="611" cy="219" r="6" fill="#2563eb"/><circle cx="597" cy="235" r="6" fill="#2563eb"/>
+<circle cx="690" cy="270" r="13" fill="#2563eb"/><text x="690" y="276" fill="#0d1117" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14" font-weight="700">2</text>
+<path d="M728 220h64" stroke="#2563eb" stroke-width="3"/><path d="M782 213l10 7-10 7" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+<rect x="840" y="150" width="240" height="140" rx="14" fill="#161b22" stroke="#2563eb" stroke-width="2"/>
+<circle cx="960" cy="218" r="28" fill="none" stroke="#2563eb" stroke-width="3"/><path d="M947 219l9 9 18-20" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1050" cy="270" r="13" fill="#2563eb"/><text x="1050" y="276" fill="#0d1117" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14" font-weight="700">3</text>
+<text x="60" y="332" fill="#8b949e" font-family="ui-monospace,monospace" font-size="14">PerryLink DSH plugin family · Apache-2.0</text>
+</svg>

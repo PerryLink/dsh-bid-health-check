@@ -1,0 +1,96 @@
+{
+  "name": "dsh-bid-health-check",
+  "version": "0.1.0",
+  "description": "读 RequirementsPack 与投标文件，报告哪些要求看起来有响应、哪些没有、哪些根本定位不到。",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "types": "lib/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.mts",
+      "default": "./lib/index.mjs"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "README-zh.md",
+    "README-es.md",
+    "README-pt.md",
+    "README-hi.md",
+    "locale/*.json",
+    "icon.svg",
+    "rules",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "verify:self-contained": "node scripts/verify-self-contained.mjs",
+    "check:lockfile": "node scripts/check-lockfile-drift.mjs",
+    "check:readmes": "node scripts/check-readme-sync.mjs",
+    "prepublishOnly": "pnpm run typecheck && pnpm test && pnpm run build && pnpm run verify:self-contained && pnpm run check:lockfile && pnpm run check:readmes && pnpm run check:citations",
+    "prepare": "tsdown",
+    "check:citations": "node scripts/check-citations.mjs"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "bid",
+    "tender",
+    "health",
+    "response"
+  ],
+  "author": {
+    "name": "PerryLink"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PerryLink/dsh-bid-health-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PerryLink/dsh-bid-health-check/issues"
+  },
+  "homepage": "https://github.com/PerryLink/dsh-bid-health-check#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-0 <0.3.0"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-tools": ">=0.1.2-rc.1 <0.2.0 || >=0.2.0-0 <0.3.0",
+    "@deepseek-ai/schemastery": "^3.18.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.5-alpha.1",
+    "@deepseek-ai/dsh-package-manifest": "0.2.1-rc.2",
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.2",
+    "@deepseek-ai/schemastery": "3.18.5-alpha.1",
+    "@types/node": "^22.20.1",
+    "vitest": "^3.2.7",
+    "@deepseek-ai/dsh-working-directory": "0.2.1-rc.2",
+    "tsdown": "^0.22.14",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dsh-table-ingest": "^0.2.0"
+  }
+}

@@ -1,0 +1,66 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.7.0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run typecheck
+      - run: pnpm test
+      - run: pnpm run build
+      # The family-standard gates. check:readmes also holds the four translated
+      # READMEs to the English one's section count, install command and
+      # configuration keys.
+      - run: pnpm run verify:self-contained
+      - run: pnpm run check:lockfile
+      - run: pnpm run check:readmes
+      - run: pnpm run check:citations
+      # The same minimum the workspace's own verify-all-tarballs.mjs checks, so
+      # a package that would publish without its bundle or its rule pack fails
+      # here instead of on the registry.
+      - name: The packed tarball carries the bundle, the patch and all five READMEs
+        shell: bash
+        run: |
+          set -euo pipefail
+          pnpm pack --pack-destination out >/dev/null
+          tarball="$(ls out/*.tgz | head -n1)"
+          echo "tarball: $tarball"
+          # List to a file rather than piping into grep: grep -q exits at the
+          # first match, tar then dies on SIGPIPE, and pipefail turns that into
+          # a failed step even when every entry was present.
+          tar -tzf "$tarball" > out/list.txt
+          for need in \
+            package/lib/index.mjs \
+            package/lib/index.d.mts \
+            package/package.json \
+            package/cordis.patch.yml \
+            package/README.md \
+            package/README-zh.md \
+            package/README-es.md \
+            package/README-pt.md \
+            package/README-hi.md ; do
+            grep -qx "$need" out/list.txt || { echo "missing: $need"; exit 1; }
+          done
+          grep -qE '^package/rules/.*\.yaml$' out/list.txt || { echo "missing: rules/*.yaml"; exit 1; }
+          echo "tarball contents OK"

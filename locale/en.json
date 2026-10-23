@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Bid health check",
+    "description": "读 RequirementsPack 与投标文件，报告哪些要求看起来有响应、哪些没有、哪些根本定位不到。"
+  }
+}

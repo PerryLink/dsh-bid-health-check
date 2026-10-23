@@ -1,0 +1,29 @@
+# pnpm 11 refuses to run dependency build scripts unless they are allowed.
+# esbuild is pulled in by vitest; the toolchain otherwise stays script-free.
+onlyBuiltDependencies:
+  - esbuild
+
+allowBuilds:
+  esbuild: true
+
+minimumReleaseAgeExclude:
+  - '@deepseek-ai/dsh-agent@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-brand@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-fs@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-llm@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-package-manifest@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-ptc-runtime@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-sandbox-policy@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-sandbox@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-scope@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-session-projection@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-session@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-system-prompt@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-timeout@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-tools@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-typert-protocol@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-user-approval@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-util-crypto@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-util-values@0.2.1-rc.2'
+  - '@deepseek-ai/dsh-working-directory@0.2.1-rc.2'
+  - dsh-table-ingest@0.2.0
