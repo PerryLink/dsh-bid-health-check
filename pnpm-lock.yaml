@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       dsh-table-ingest:
-        specifier: ^0.2.0
-        version: 0.2.0(@deepseek-ai/cordis@4.0.5)(@deepseek-ai/dsh-tools@0.2.1-rc.2(53871834bb50b7f532ec7289e680bbda))(@deepseek-ai/schemastery@3.18.5)
+        specifier: ^0.2.1
+        version: 0.2.1(@deepseek-ai/cordis@4.0.5)(@deepseek-ai/dsh-tools@0.2.1-rc.2(53871834bb50b7f532ec7289e680bbda))(@deepseek-ai/schemastery@3.18.5)
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: 4.0.5
@@ -761,8 +761,8 @@ packages:
   defu@6.1.7:
     resolution: {integrity: sha512-7z22QmUWiQ/2d0KkdYmANbRUVABpZ9SNYyH5vx6PZ+nE5bcC0l7uFvEfHlyld/HcGBFTL536ClDt3DEcSlEJAQ==}
 
-  dsh-table-ingest@0.2.0:
-    resolution: {integrity: sha512-g0edMPmE8wVUgpWTfwefpOX6tHemlx8lvqUGW2S8LPY8Mf9Wh2Ubj9V4Hl+ON0RW+Ea1PYgtSkaizLIJOhX6eQ==}
+  dsh-table-ingest@0.2.1:
+    resolution: {integrity: sha512-DfTdzAlo9RuHHNWFeAieLAX8S4xyyC4HPRFIpkM3+ViAOIlVbkunufNAo5OA+QLXnGl3Zwcgzar+Rsu7Vl9e0w==}
     engines: {dsh: '>=0.2.1-0 <0.3.0', node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.2
@@ -1581,7 +1581,7 @@ snapshots:
 
   defu@6.1.7: {}
 
-  dsh-table-ingest@0.2.0(@deepseek-ai/cordis@4.0.5)(@deepseek-ai/dsh-tools@0.2.1-rc.2(53871834bb50b7f532ec7289e680bbda))(@deepseek-ai/schemastery@3.18.5):
+  dsh-table-ingest@0.2.1(@deepseek-ai/cordis@4.0.5)(@deepseek-ai/dsh-tools@0.2.1-rc.2(53871834bb50b7f532ec7289e680bbda))(@deepseek-ai/schemastery@3.18.5):
     dependencies:
       '@deepseek-ai/cordis': 4.0.5
       '@deepseek-ai/dsh-tools': 0.2.1-rc.2(53871834bb50b7f532ec7289e680bbda)

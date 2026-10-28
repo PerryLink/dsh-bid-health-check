@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Require `dsh-table-ingest` `^0.2.1`, which adds the ZIP entry-count, per-entry and cumulative output budgets requested in the dshopen review. No rule or report change.
+
 ## 0.1.0
 
 First release: consume a `RequirementsPack` and report, per requirement, where the
