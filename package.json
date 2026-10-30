@@ -1,6 +1,6 @@
 {
   "name": "dsh-bid-health-check",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "读 RequirementsPack 与投标文件，报告哪些要求看起来有响应、哪些没有、哪些根本定位不到。",
   "type": "module",
   "main": "lib/index.mjs",
