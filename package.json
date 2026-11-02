@@ -25,7 +25,8 @@
     "icon.svg",
     "rules",
     "CHANGELOG.md",
-    "SECURITY.md"
+    "SECURITY.md",
+    "docs/assets/*"
   ],
   "scripts": {
     "build": "tsdown",
