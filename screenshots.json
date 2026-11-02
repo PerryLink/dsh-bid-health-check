@@ -3,12 +3,12 @@
     "path": "docs/assets/dsh-bid-health-check-hero.png",
     "kind": "hero",
     "alt": "dsh-bid-health-check terminal output",
-    "caption": "Real dsh-bid-health-check checker output."
+    "caption": "Real `pnpm test` run: 18/18 tests passed (2 test files)."
   },
   {
     "path": "docs/assets/dsh-bid-health-check-demo.gif",
     "kind": "demo",
     "alt": "Animated dsh-bid-health-check terminal session",
-    "caption": "The same run, assembled line by line."
+    "caption": "The same `pnpm test` run — 18/18 tests passed — assembled line by line."
   }
 ]
