@@ -1,0 +1,9 @@
+{
+  "tool": "bid_health_check",
+  "summary": {
+    "responded": 2,
+    "weak": 3,
+    "notLocated": 6
+  },
+  "blockedByPack": 1
+}
