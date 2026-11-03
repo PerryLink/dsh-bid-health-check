@@ -1,6 +1,6 @@
 # dsh-bid-health-check — 投标响应健康度核对
 
-## 快速试跑（1 分钟）
+### 快速试跑（1 分钟）
 
 ```bash
 node samples/quickstart/run.mjs --check
