@@ -1,0 +1,394 @@
+{
+  "packVersion": 1,
+  "generator": {
+    "plugin": "dsh-tender-requirements",
+    "version": "0.2.0",
+    "rulesVersion": "2026.1"
+  },
+  "source": {
+    "files": [
+      {
+        "path": "tender-sample.docx",
+        "role": "主文件"
+      }
+    ],
+    "paragraphsTotal": 15,
+    "hasAmendments": false
+  },
+  "header": {
+    "投标截止时间": "2026年11月20日 9时30分",
+    "开标时间": "2026年11月20日 9时30分",
+    "投标保证金": "人民币伍万元整（¥50,000.00）",
+    "投标有效期": "投标截止之日起 90 日历天",
+    "最高限价": "人民币贰佰万元整",
+    "密封要求": "投标文件应密封并在封口处加盖投标人公章"
+  },
+  "items": [
+    {
+      "id": "TRQ-REJ-001",
+      "category": "reject-clause",
+      "family": "refuse",
+      "title": "采购人、采购代理机构应当拒收",
+      "quote": "逾期送达或者未按照招标文件要求密封的投标文件，采购人、采购代理机构应当拒收。",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 10
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "B",
+      "reasons": [
+        "命中「拒收」族（refuse）",
+        "未在章节标题里找到定位线索"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-REJ-002",
+      "category": "reject-clause",
+      "family": "invalid",
+      "title": "未加盖投标人公章的投标文件按无效投标处理",
+      "quote": "未加盖投标人公章的投标文件按无效投标处理。",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 11
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "命中「无效投标」族（invalid）",
+        "位于投标人须知/评标办法一类章节"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-REJ-003",
+      "category": "reject-clause",
+      "family": "invalid",
+      "title": "其投标无效",
+      "quote": "投标报价超过最高限价的，其投标无效。",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 12
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "命中「投标无效」族（invalid）",
+        "位于投标人须知/评标办法一类章节"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-REJ-004",
+      "category": "reject-clause",
+      "family": "reject",
+      "title": "应当否决其投标",
+      "quote": "经评标委员会认定属于重大偏差的，应当否决其投标。",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 13
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "B",
+      "reasons": [
+        "命中「否决其投标」族（reject）",
+        "未在章节标题里找到定位线索"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-REJ-005",
+      "category": "reject-clause",
+      "family": "invalid",
+      "title": "投标有效期不足的按无效投标处理",
+      "quote": "原则上，投标有效期不足的按无效投标处理。",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 14
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "C",
+      "reasons": [
+        "命中「无效投标」族（invalid）",
+        "位于投标人须知/评标办法一类章节",
+        "含修饰词「原则上」，非绝对表述"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [
+        "hedged"
+      ],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-HDR-006",
+      "category": "timeline",
+      "title": "投标截止时间",
+      "quote": "投标截止时间：2026年11月20日 9时30分",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 0
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "前附表两列表格中的键值对，取值逐字来自表格"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-HDR-007",
+      "category": "timeline",
+      "title": "开标时间",
+      "quote": "开标时间：2026年11月20日 9时30分",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 0
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "前附表两列表格中的键值对，取值逐字来自表格"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-HDR-008",
+      "category": "deposit",
+      "title": "投标保证金",
+      "quote": "投标保证金：人民币伍万元整（¥50,000.00）",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 0
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "前附表两列表格中的键值对，取值逐字来自表格"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-HDR-009",
+      "category": "composition",
+      "title": "投标有效期",
+      "quote": "投标有效期：投标截止之日起 90 日历天",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 0
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "前附表两列表格中的键值对，取值逐字来自表格"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-HDR-010",
+      "category": "composition",
+      "title": "最高限价",
+      "quote": "最高限价：人民币贰佰万元整",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 0
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "前附表两列表格中的键值对，取值逐字来自表格"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    },
+    {
+      "id": "TRQ-HDR-011",
+      "category": "composition",
+      "title": "密封要求",
+      "quote": "密封要求：投标文件应密封并在封口处加盖投标人公章",
+      "source": {
+        "file": "tender-sample.docx",
+        "paragraph": 0
+      },
+      "verification": {
+        "matchMode": "exact",
+        "quoteVerified": true
+      },
+      "tier": "A",
+      "reasons": [
+        "前附表两列表格中的键值对，取值逐字来自表格"
+      ],
+      "whoseRisk": "bidder",
+      "flags": [],
+      "review": {
+        "state": "pending"
+      }
+    }
+  ],
+  "coverage": {
+    "topics": [
+      {
+        "id": "COV-01",
+        "topic": "未盖章 / 未签字",
+        "hit": true,
+        "itemIds": [
+          "TRQ-REJ-002"
+        ],
+        "note": ""
+      },
+      {
+        "id": "COV-02",
+        "topic": "密封不符合要求",
+        "hit": true,
+        "itemIds": [
+          "TRQ-REJ-001",
+          "TRQ-HDR-011"
+        ],
+        "note": ""
+      },
+      {
+        "id": "COV-03",
+        "topic": "逾期送达",
+        "hit": true,
+        "itemIds": [
+          "TRQ-REJ-001"
+        ],
+        "note": ""
+      },
+      {
+        "id": "COV-04",
+        "topic": "一标多投 / 联合体",
+        "hit": false,
+        "itemIds": [],
+        "note": "未检索到相关表述，请人工确认；这不表示文件里没有"
+      },
+      {
+        "id": "COV-05",
+        "topic": "投标保证金",
+        "hit": true,
+        "itemIds": [
+          "TRQ-HDR-008"
+        ],
+        "note": ""
+      },
+      {
+        "id": "COV-06",
+        "topic": "报价超过最高限价",
+        "hit": true,
+        "itemIds": [
+          "TRQ-REJ-003",
+          "TRQ-HDR-010"
+        ],
+        "note": ""
+      },
+      {
+        "id": "COV-07",
+        "topic": "资格条件不符",
+        "hit": false,
+        "itemIds": [],
+        "note": "未检索到相关表述，请人工确认；这不表示文件里没有"
+      },
+      {
+        "id": "COV-08",
+        "topic": "串通投标 / 弄虚作假",
+        "hit": false,
+        "itemIds": [],
+        "note": "未检索到相关表述，请人工确认；这不表示文件里没有"
+      },
+      {
+        "id": "COV-09",
+        "topic": "投标有效期不足",
+        "hit": true,
+        "itemIds": [
+          "TRQ-REJ-005",
+          "TRQ-HDR-009"
+        ],
+        "note": ""
+      },
+      {
+        "id": "COV-10",
+        "topic": "澄清与修改的效力",
+        "hit": false,
+        "itemIds": [],
+        "note": "未检索到相关表述，请人工确认；这不表示文件里没有"
+      }
+    ]
+  },
+  "queues": {
+    "a": 8,
+    "b": 2,
+    "c": 1
+  },
+  "deliverable": false,
+  "notes": [
+    "C 队列有 1 条：抽不出来的条款必须人工补录，在此之前本包不算完成体检",
+    "覆盖网有 4 个话题未命中，请在报告里逐条确认",
+    "只解析了主文件；澄清、补遗、答疑纪要是招标文件的组成部分，本包不合并"
+  ]
+}
