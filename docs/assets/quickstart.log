@@ -1,0 +1,2 @@
+$ node samples/quickstart/run.mjs
+bid_health_check: 2 responded, 3 weak, 6 not located (1 blocked by pack)
