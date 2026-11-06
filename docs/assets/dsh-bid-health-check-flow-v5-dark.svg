@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-labelledby="title desc">
+<title id="title">dsh-bid-health-check dual-channel merge</title>
+<desc id="desc">RequirementsPack items and bid .docx paragraphs merge into one longest-common-substring measure: under 4 characters falls back to the requirement quote, 5 or more locates a paragraph and ties take the longer one. Three caps keep a located hit at weak: a heading of 12 characters or fewer, overlap with the quote only at 6 or more, or a reject-clause category. The gate fans out to responded, weak and not-located; the quickstart run gives 2, 3 and 6. A bypass rail carries the tier C requirement: it never enters the measure, is reported as blockedByPack, stays inside the not-located group, and the bidder is never graded on it.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.25" y2="1"><stop offset="0" stop-color="#131a2a"/><stop offset="1" stop-color="#0c1016"/></linearGradient>
+<filter id="soft" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#241f33" flood-opacity="0.55"/></filter>
+<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#2a3346"/></pattern>
+<linearGradient id="chan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8496f5" stop-opacity="0.25"/><stop offset="1" stop-color="#8496f5" stop-opacity="0.8"/></linearGradient>
+</defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<rect width="1100" height="660" fill="url(#dots)" opacity="0.5"/>
+<text x="28.0" y="52.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="26" font-weight="700" fill="#f2f4fb" text-anchor="start">Two channels, one measure, three states</text>
+<text x="28.0" y="78.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13.5" font-weight="400" fill="#b4bdd2" text-anchor="start">pack items[] + .docx paragraphs → one longest-common-substring measure; caps demote a hit; tier C bypasses.</text>
+<text x="1072.0" y="48.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#8496f5" text-anchor="end">rules: [] · timeoutMs 120000</text>
+<text x="1072.0" y="68.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="end">inject [&apos;tools&apos;] · local only</text>
+<line x1="28" y1="90" x2="1072" y2="90" stroke="#2b3548" stroke-width="1" opacity="0.8"/>
+<rect x="28.0" y="100.0" width="266.0" height="178.0" rx="18" fill="#1a2233" stroke="#2b3548" stroke-width="1.2" filter="url(#soft)"/>
+<text x="46.0" y="126.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#f2f4fb" text-anchor="start">Bid .docx</text>
+<text x="276.0" y="126.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="end">dsh-table-ingest</text>
+<text x="46.0" y="146.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">.docx → paragraphs[12]</text>
+<text x="46.0" y="176.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">¶6</text>
+<text x="76.0" y="176.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#b4bdd2" text-anchor="start">…缴纳投标保证金伍万元整。</text>
+<rect x="38.0" y="190.0" width="248.0" height="25.0" rx="7" fill="#232c47"/>
+<text x="46.0" y="206.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#8496f5" text-anchor="start">¶8</text>
+<text x="76.0" y="206.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#f2f4fb" text-anchor="start">…按招标文件要求密封…</text>
+<text x="46.0" y="236.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">¶10</text>
+<text x="76.0" y="236.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#b4bdd2" text-anchor="start">…投标截止之日起 90 日历天</text>
+<text x="46.0" y="266.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">tables / scans not read</text>
+<rect x="28.0" y="290.0" width="266.0" height="206.0" rx="18" fill="#1a2233" stroke="#2b3548" stroke-width="1.2" filter="url(#soft)"/>
+<text x="46.0" y="316.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#f2f4fb" text-anchor="start">RequirementsPack</text>
+<text x="276.0" y="316.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="end">items[] 11</text>
+<text x="46.0" y="336.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">id · tier · title / quote</text>
+<text x="46.0" y="352.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#f2f4fb" text-anchor="start">TRQ-HDR-008</text>
+<text x="276.0" y="352.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#6fd6a4" text-anchor="end">tier A</text>
+<text x="46.0" y="368.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#f2f4fb" text-anchor="start">投标保证金</text>
+<text x="46.0" y="384.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#f2f4fb" text-anchor="start">TRQ-HDR-011</text>
+<text x="276.0" y="384.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#6fd6a4" text-anchor="end">tier A</text>
+<text x="46.0" y="400.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#f2f4fb" text-anchor="start">密封要求</text>
+<text x="46.0" y="416.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#f2f4fb" text-anchor="start">TRQ-REJ-001</text>
+<text x="276.0" y="416.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="end">tier B</text>
+<text x="46.0" y="432.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#f2f4fb" text-anchor="start">采购人、采购代理机构应当拒收</text>
+<line x1="36.0" y1="434.0" x2="36.0" y2="468.0" stroke="#b9a9e8" stroke-width="2" stroke-dasharray="3 3" stroke-linecap="round"/>
+<text x="46.0" y="448.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">TRQ-REJ-005</text>
+<text x="276.0" y="448.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="end">tier C</text>
+<text x="46.0" y="464.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="400" fill="#7e879c" text-anchor="start">投标有效期不足的按无效投标处理</text>
+<text x="46.0" y="486.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">+7 more · A 8 / B 2 / C 1</text>
+<path d="M294 189 C 336 189, 344 300, 380 300" fill="none" stroke="url(#chan)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M294 393 C 336 393, 344 300, 380 300" fill="none" stroke="url(#chan)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="294.0" cy="189.0" r="3.4" fill="#8496f5"/>
+<circle cx="294.0" cy="393.0" r="3.4" fill="#8496f5"/>
+<circle cx="380.0" cy="300.0" r="4.2" fill="#8496f5" stroke="#1a2233" stroke-width="2"/>
+<rect x="380.0" y="100.0" width="332.0" height="396.0" rx="18" fill="#1a2233" stroke="#2b3548" stroke-width="1.2" filter="url(#soft)"/>
+<text x="398.0" y="126.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="700" fill="#f2f4fb" text-anchor="start">Overlap measure</text>
+<text x="694.0" y="126.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#8496f5" text-anchor="end">bid_health_check</text>
+<rect x="398.0" y="138.0" width="296.0" height="74.0" rx="12" fill="#1f2638"/>
+<text x="410.0" y="160.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11.5" font-weight="400" fill="#f2f4fb" text-anchor="start">commonRun(title, ¶) → best</text>
+<text x="410.0" y="180.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">best &lt; 4 → commonRun(quote, ¶)</text>
+<text x="410.0" y="200.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">tie → longer ¶ · best ≥ 5 → located</text>
+<rect x="404.0" y="233.0" width="284.0" height="6.0" rx="3" fill="#1f2638"/>
+<rect x="498.7" y="233.0" width="189.3" height="6.0" rx="3" fill="#8496f5" opacity="0.18"/>
+<rect x="522.3" y="233.0" width="165.7" height="6.0" rx="3" fill="#8496f5" opacity="0.55"/>
+<line x1="404.0" y1="232.0" x2="404.0" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<line x1="427.7" y1="234.0" x2="427.7" y2="242.0" stroke="#7e879c" stroke-width="1" stroke-linecap="round"/>
+<line x1="451.3" y1="232.0" x2="451.3" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<line x1="475.0" y1="234.0" x2="475.0" y2="242.0" stroke="#7e879c" stroke-width="1" stroke-linecap="round"/>
+<line x1="498.7" y1="232.0" x2="498.7" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<line x1="522.3" y1="234.0" x2="522.3" y2="242.0" stroke="#7e879c" stroke-width="1" stroke-linecap="round"/>
+<line x1="546.0" y1="232.0" x2="546.0" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<line x1="569.7" y1="234.0" x2="569.7" y2="242.0" stroke="#7e879c" stroke-width="1" stroke-linecap="round"/>
+<line x1="593.3" y1="232.0" x2="593.3" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<line x1="617.0" y1="234.0" x2="617.0" y2="242.0" stroke="#7e879c" stroke-width="1" stroke-linecap="round"/>
+<line x1="640.7" y1="232.0" x2="640.7" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<line x1="664.3" y1="234.0" x2="664.3" y2="242.0" stroke="#7e879c" stroke-width="1" stroke-linecap="round"/>
+<line x1="688.0" y1="232.0" x2="688.0" y2="245.0" stroke="#b4bdd2" stroke-width="1" stroke-linecap="round"/>
+<text x="404.0" y="258.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="middle">0</text>
+<text x="498.7" y="258.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="middle">4</text>
+<text x="522.3" y="258.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#8496f5" text-anchor="middle">5</text>
+<text x="546.0" y="258.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="middle">6</text>
+<text x="593.3" y="258.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="middle">8</text>
+<text x="688.0" y="258.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="middle">12</text>
+<line x1="522.3" y1="220.0" x2="522.3" y2="248.0" stroke="#8496f5" stroke-width="1.6" stroke-linecap="round"/>
+<text x="529.3" y="224.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#8496f5" text-anchor="start">≥5</text>
+<text x="398.0" y="280.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">&lt;4 falls back to quote · 6+ quote-only</text>
+<text x="398.0" y="306.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="700" fill="#7e879c" text-anchor="start" letter-spacing="0.4">CAPS · a located hit never exceeds weak</text>
+<rect x="398.0" y="318.0" width="296.0" height="30.0" rx="9" fill="#33280f"/>
+<text x="410.0" y="338.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="start">heading ≤ 12 chars</text>
+<text x="682.0" y="338.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="end">→ weak</text>
+<rect x="398.0" y="354.0" width="296.0" height="30.0" rx="9" fill="#33280f"/>
+<text x="410.0" y="374.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="start">quote-only overlap ≥ 6</text>
+<text x="682.0" y="374.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="end">→ weak</text>
+<rect x="398.0" y="390.0" width="296.0" height="30.0" rx="9" fill="#33280f"/>
+<text x="410.0" y="410.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="start">category = reject-clause</text>
+<text x="682.0" y="410.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#e8b45a" text-anchor="end">→ weak</text>
+<text x="398.0" y="440.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">no hit ≥ 5 chars → not-located</text>
+<text x="398.0" y="462.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#b9a9e8" text-anchor="start">tier C → bypass (see rail)</text>
+<text x="398.0" y="484.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">empty items[] → error</text>
+<path d="M712 300 C 730 300, 732 166, 748 166" fill="none" stroke="#6fd6a4" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+<path d="M712 300 C 730 300, 732 298, 748 298" fill="none" stroke="#e8b45a" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+<path d="M712 300 C 730 300, 732 432, 748 432" fill="none" stroke="#b9a9e8" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" opacity="0.65"/>
+<circle cx="712.0" cy="300.0" r="3.2" fill="#8496f5"/>
+<rect x="748.0" y="100.0" width="324.0" height="122.0" rx="18" fill="#1a2233" stroke="#2b3548" stroke-width="1.2" filter="url(#soft)"/>
+<rect x="749.0" y="114.0" width="4.0" height="34.0" rx="2" fill="#6fd6a4"/>
+<text x="768.0" y="124.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="15" font-weight="700" fill="#6fd6a4" text-anchor="start">responded</text>
+<text x="1052.0" y="130.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="30" font-weight="700" fill="#6fd6a4" text-anchor="end">2</text>
+<text x="768.0" y="146.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">looks answered — a pointer, not a verdict</text>
+<text x="768.0" y="168.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">TRQ-HDR-008 → ¶6 · 5 chars</text>
+<text x="768.0" y="185.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">TRQ-HDR-009 → ¶10 · 5 chars</text>
+<text x="768.0" y="210.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">title overlap ≥ 5 chars</text>
+<rect x="748.0" y="236.0" width="324.0" height="122.0" rx="18" fill="#1a2233" stroke="#2b3548" stroke-width="1.2" filter="url(#soft)"/>
+<rect x="749.0" y="250.0" width="4.0" height="34.0" rx="2" fill="#e8b45a"/>
+<text x="768.0" y="260.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="15" font-weight="700" fill="#e8b45a" text-anchor="start">weak</text>
+<text x="1052.0" y="266.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="30" font-weight="700" fill="#e8b45a" text-anchor="end">3</text>
+<text x="768.0" y="282.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">capped — needs a human look</text>
+<text x="768.0" y="304.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">HDR-011 → ¶8 · 12 chars, quote-only</text>
+<text x="768.0" y="321.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">REJ-001 → ¶8 · 8 chars, reject-clause</text>
+<text x="768.0" y="346.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">HDR-011 is the longest match and still weak</text>
+<rect x="748.0" y="372.0" width="324.0" height="122.0" rx="18" fill="#1a2233" stroke="#2b3548" stroke-width="1.2" filter="url(#soft)"/>
+<rect x="749.0" y="386.0" width="4.0" height="34.0" rx="2" fill="#b9a9e8"/>
+<text x="768.0" y="396.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="15" font-weight="700" fill="#b9a9e8" text-anchor="start">not-located</text>
+<text x="1052.0" y="402.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="30" font-weight="700" fill="#b9a9e8" text-anchor="end">6</text>
+<text x="768.0" y="418.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">could not locate — NOT missing</text>
+<text x="768.0" y="440.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">REJ-003 · HDR-006 · HDR-007</text>
+<text x="768.0" y="457.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">HDR-010 · REJ-004 · +1 tier C</text>
+<text x="768.0" y="482.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">the report states this in words</text>
+<rect x="28.0" y="512.0" width="1044.0" height="30.0" rx="15" fill="#1f2638" stroke="#2b3548" stroke-width="1.0" stroke-dasharray="6 4"/>
+<text x="44.0" y="532.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="700" fill="#b9a9e8" text-anchor="start" letter-spacing="0.6">BYPASS</text>
+<text x="124.0" y="532.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">tier C (1) is shunted before the measure → blockedByPack; it stays in not-located and the bidder is never graded on it.</text>
+<line x1="28" y1="558" x2="1072" y2="558" stroke="#2b3548" stroke-width="1" opacity="0.8"/>
+<text x="28.0" y="580.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">bid_health_check · inject [&apos;tools&apos;] · timeoutMs 120000 · local: no network / no model / no writes</text>
+<text x="28.0" y="600.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#b4bdd2" text-anchor="start">report order: not-located → weak → responded — the first group must not be read as missing.</text>
+<text x="28.0" y="620.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">samples/quickstart: responded 2 · weak 3 · not-located 6 · blockedByPack 1 — matches expected/result.json</text>
+<text x="28.0" y="640.0" font-family="'Microsoft YaHei','Segoe UI','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" font-weight="400" fill="#7e879c" text-anchor="start">empty items[] → error, never an empty "all clear" · tables / scans / appendices are not read</text>
+<text x="1072.0" y="640.0" font-family="Consolas,'Microsoft YaHei',ui-monospace,monospace" font-size="11" font-weight="400" fill="#7e879c" text-anchor="end">Apache-2.0 · PerryLink DSH plugin family</text>
+</svg>

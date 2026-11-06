@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-dark.svg">
-  <img src="docs/assets/dsh-bid-health-check-flow-light.svg" width="100%" alt="Fluxo do dsh-bid-health-check: RequirementsPack e o .docx da proposta passam pelo bid_health_check, que faz correspondência textual e produz responded / weak / not-located; a fila C é repassada como blockedByPack">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-bid-health-check-hero-en-light.webp" width="100%" alt="Capa do dsh-bid-health-check: os 11 requisitos do pack e os parágrafos da proposta .docx passam por uma régua de coincidência e caem em responded 2 / weak 3 / not-located 6; o terceiro cartão diz «não localizado não é não escrito» e 1 item da fila C é repassado como blockedByPack.">
 </picture>
 
 # dsh-bid-health-check
@@ -39,6 +39,11 @@ O `dsh-bid-health-check` lê um `RequirementsPack` (gerado pelo `dsh-tender-requ
 A forma honesta dessa pergunta é bem mais estreita que «a proposta está completa?»: a ferramenta consegue localizar um parágrafo que parece responder, ou não localizar nenhum. Ela não sabe se o parágrafo localizado realmente satisfaz o requisito, e muito menos pode concluir que um requisito não localizado está sem resposta. O relatório mantém «não localizado» em um grupo próprio e enuncia essa distinção primeiro — tratar «não localizado» como «ausente» é como um licitante acaba reescrevendo uma seção que já estava lá, em uma tabela, um anexo ou com outras palavras.
 
 Há exatamente duas entradas: a lista de requisitos `pack` (JSON, ou YAML com um array `items`) e a proposta `file` (`.docx`). Os parágrafos são lidos pelo `dsh-table-ingest`; esta versão não lê as tabelas dentro da proposta.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="Estrutura: o canal RequirementsPack e o canal de parágrafos da proposta convergem em uma medida de substring comum: menos de 4 caracteres volta à citação, 5 localiza e o empate toma o parágrafo mais longo; título, só citação e cláusula de rejeição ficam limitados a weak; a fila C desvia para blockedByPack.">
+</picture>
 
 ## Instalação em três passos
 
@@ -247,7 +252,7 @@ pnpm pack
 
 A saída de build é `lib/` (`tsdown`); o `prepublishOnly` reexecuta typecheck, testes, build, a porta de autossuficiência, a do lockfile e a de README. O kit compartilhado é sincronizado com `node ../scripts/sync-shared.mjs dsh-bid-health-check`.
 
-As imagens do README são geradas por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py): dois SVGs vetoriais (claro/escuro), seguros para reexecutar.
+As imagens do README são geradas por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py): a capa (bitmaps Pillow, zh/en x claro/escuro) e a figura de estrutura (SVG escrito à mão, claro/escuro), tudo reproduzível.
 
 | Caminho | Papel |
 |---|---|

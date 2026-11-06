@@ -1,8 +1,8 @@
-<div align="center">
+﻿<div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-dark.svg">
-  <img src="docs/assets/dsh-bid-health-check-flow-light.svg" width="100%" alt="dsh-bid-health-check data flow: RequirementsPack and the bid .docx go through bid_health_check word-level matching, producing responded / weak / not-located, with queue C passed through as blockedByPack">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-bid-health-check-hero-en-light.webp" width="100%" alt="dsh-bid-health-check hero: the pack's 11 requirements and the bid .docx paragraphs meet one overlap ruler and land in responded 2 / weak 3 / not-located 6; the third verdict card says not located is not written, and 1 tier C item is passed through as blockedByPack.">
 </picture>
 
 # dsh-bid-health-check
@@ -39,6 +39,11 @@ dsh plugin --profile <name> add dsh-bid-health-check
 The honest form of that question is much narrower than "is the bid complete": the tool can locate a paragraph that appears to answer a requirement, or fail to locate one. It cannot know whether the located paragraph actually satisfies the requirement, and it certainly cannot conclude that an unlocated requirement is unanswered. The report keeps "not located" in its own group and states that distinction first — treating "not located" as "missing" is how a bidder comes to rewrite a section that was already there, in a table, an appendix, or different wording.
 
 There are exactly two inputs: the requirements list `pack` (JSON, or YAML with an `items` array) and the bid `file` (`.docx`). Paragraphs are read by `dsh-table-ingest`; tables inside the bid are not read by this version.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="Structure: the RequirementsPack channel and the bid-paragraph channel merge into one longest-common-substring measure — under 4 characters falls back to the quote, 5 locates, ties take the longer paragraph; heading, quote-only and reject-clause matches cap at weak; tier C bypasses to blockedByPack and is never graded.">
+</picture>
 
 ## Three-step setup
 
@@ -247,7 +252,7 @@ pnpm pack
 
 The build output is `lib/` (`tsdown`); `prepublishOnly` re-runs typecheck, tests, build, the self-contained gate, the lockfile check, and the README gate. The shared kit is synced with `node ../scripts/sync-shared.mjs dsh-bid-health-check`.
 
-README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py): two vector SVGs (light/dark), safe to re-run.
+README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py): the opening hero (Pillow bitmaps, zh/en x light/dark) and the semantic structure figure (hand-written SVG, light/dark), all safe to re-run.
 
 | Path | Role |
 |---|---|

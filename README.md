@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-dark.svg">
-  <img src="docs/assets/dsh-bid-health-check-flow-light.svg" width="100%" alt="dsh-bid-health-check 数据流：RequirementsPack 与投标文件 .docx 经 bid_health_check 做词面重合，输出 responded / weak / not-located，C 队列透传为 blockedByPack">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-bid-health-check-hero-zh-light.webp" width="100%" alt="dsh-bid-health-check 配图：要求清单的 11 条条目与投标文件 .docx 段落进入重合尺，落到「看起来有响应 2 / 响应可疑 3 / 定位不到 6」；第三张判定卡写明「定位不到 ≠ 没写」，另有 1 条 tier C 记为 blockedByPack。">
 </picture>
 
 # dsh-bid-health-check
@@ -39,6 +39,11 @@ dsh plugin --profile <name> add dsh-bid-health-check
 这个问题的诚实形态比「投标文件完整吗」窄得多：工具能定位到一段看起来在回应要求的文字，或者定位不到；它不能判断那一段是否真的满足要求，更不能断言定位不到就等于没写。报告把「定位不到」单独成组，并在最前面写明这一区别——因为把「定位不到」当成「没写」，会让人去重写一段本来已经写在表格、附件或另一种措辞里的内容。
 
 输入只有两样：要求清单 `pack`（JSON，或含 `items` 数组的 YAML）与投标文件 `file`（`.docx`）。段落的读取交给 `dsh-table-ingest`；本版不读取投标文件里的表格。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="结构图：RequirementsPack 通道与投标文件段落通道汇入同一条最长公共子串度量——不足 4 字回退原文、5 字定位、平局取更长段；标题式、仅原文、废标条款三类封顶 weak；tier C 旁路透传为 blockedByPack，不评投标人。">
+</picture>
 
 ## 三步上手
 
@@ -247,7 +252,7 @@ pnpm pack
 
 构建产物是 `lib/`（`tsdown`）；发布前 `prepublishOnly` 会重跑 typecheck、测试、build、自包含校验、锁文件与 README 门禁。共享 kit 用 `node ../scripts/sync-shared.mjs dsh-bid-health-check` 同步。
 
-配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成两张 SVG（浅色/深色），纯矢量、可重复执行。
+配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成：开头 hero（Pillow 位图，中英 × 浅深四版）与语义结构图（手写 SVG，浅色/深色），可重复执行。
 
 | 路径 | 作用 |
 |---|---|

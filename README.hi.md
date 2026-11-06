@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-dark.svg">
-  <img src="docs/assets/dsh-bid-health-check-flow-light.svg" width="100%" alt="dsh-bid-health-check डेटा प्रवाह: RequirementsPack और बोली की .docx फ़ाइल bid_health_check से गुज़रती है, जो शब्द-स्तरीय मिलान करके responded / weak / not-located देता है; C कतार blockedByPack के रूप में आगे बढ़ती है">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-hero-en-dark.webp">
+  <img src="docs/assets/dsh-bid-health-check-hero-en-light.webp" width="100%" alt="dsh-bid-health-check का शीर्ष चित्र: पैक की 11 आवश्यकताएँ और बोली .docx के अनुच्छेद एक मिलान-पैमाने से गुज़रते हैं और responded 2 / weak 3 / not-located 6 में बँटते हैं; तीसरा कार्ड कहता है «नहीं मिला ≠ नहीं लिखा», और 1 tier C प्रविष्टि blockedByPack के रूप में आगे जाती है।">
 </picture>
 
 # dsh-bid-health-check
@@ -39,6 +39,11 @@ dsh plugin --profile <name> add dsh-bid-health-check
 इस प्रश्न का ईमानदार रूप «क्या बोली पूरी है» से बहुत संकरा है: उपकरण कोई अनुच्छेद ढूँढ सकता है या नहीं ढूँढ सकता। वह नहीं जान सकता कि मिला हुआ अनुच्छेद आवश्यकता वास्तव में पूरी करता है या नहीं, और यह भी नहीं कह सकता कि न मिली आवश्यकता का उत्तर नहीं दिया गया। रिपोर्ट «नहीं मिला» को अलग समूह में रखती है और यह अंतर सबसे पहले लिखती है — «नहीं मिला» को «अनुपस्थित» मान लेना ही वह कारण है जिससे कोई लेखक ऐसा अनुभाग दोबारा लिख देता है जो पहले से तालिका, परिशिष्ट या दूसरे शब्दों में मौजूद था।
 
 इनपुट ठीक दो हैं: आवश्यकता सूची `pack` (JSON, या `items` array वाला YAML) और बोली `file` (`.docx`)। अनुच्छेद `dsh-table-ingest` पढ़ता है; यह संस्करण बोली के अंदर की तालिकाएँ नहीं पढ़ता।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-bid-health-check-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="संरचना: RequirementsPack चैनल और बोली-अनुच्छेद चैनल एक साझा सबस्ट्रिंग माप में मिलते हैं — 4 अक्षर से कम होने पर उद्धरण पर लौटना, 5 पर स्थान मिलना, बराबरी पर लंबा अनुच्छेद; शीर्षक, केवल-उद्धरण और अस्वीकृति-अनुच्छेद weak पर सीमित; tier C blockedByPack की ओर बाईपास।">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -247,7 +252,7 @@ pnpm pack
 
 बिल्ड आउटपुट `lib/` (`tsdown`) है; `prepublishOnly` typecheck, टेस्ट, build, स्व-निहित गेट, lockfile और README गेट दोबारा चलाता है। साझा kit `node ../scripts/sync-shared.mjs dsh-bid-health-check` से सिंक होता है।
 
-README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) बनाता है: दो वेक्टर SVG (हल्का/गहरा), दोबारा चलाना सुरक्षित है।
+README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) बनाता है: शीर्ष hero (Pillow बिटमैप, zh/en x हल्का/गहरा) और संरचना चित्र (हस्तलिखित SVG, हल्का/गहरा), दोबारा चलाना सुरक्षित है।
 
 | पथ | भूमिका |
 |---|---|
