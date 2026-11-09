@@ -18,6 +18,7 @@ const SEVERITY_LABEL: Record<Severity, string> = {
 /** Render one locator as a compact human-readable suffix. */
 export function formatLocator(locator: Locator): string {
   const parts: string[] = []
+  if (locator.table !== undefined) parts.push(locator.table)
   if (locator.file !== undefined) parts.push(locator.file)
   if (locator.page !== undefined) parts.push(`第${locator.page}页`)
   if (locator.line !== undefined) parts.push(`第${locator.line}行`)

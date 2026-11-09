@@ -21,6 +21,7 @@ export interface ReportView {
   summary: { error: number; warn: number; info: number }
   issueCount: number
   skippedCount: number
+  execution?: Report['execution']
   markdown: string
   reportJson: string
 }
@@ -62,6 +63,14 @@ export function buildView(report: Report): ReportView {
   lines.push(`- 检查时间：${report.checkedAt}`)
   lines.push(`- 规则集版本：${report.rulesetVersion}`)
   lines.push(`- 统计：错误 ${report.summary.error} · 提示 ${report.summary.warn} · 参考 ${report.summary.info}`)
+  if (report.execution !== undefined) {
+    lines.push(
+      `- 规则执行：${report.execution.executed}/${report.execution.total}` +
+        ` · 跳过 ${report.execution.skipped}` +
+        ` · manual ${report.execution.manual}` +
+        ` · 未实现 ${report.execution.unsupported}`,
+    )
+  }
   lines.push('')
   lines.push('## 差异明细')
   lines.push('')
@@ -93,6 +102,7 @@ export function buildView(report: Report): ReportView {
     summary: report.summary,
     issueCount: report.issues.length,
     skippedCount: report.skipped.length,
+    ...(report.execution === undefined ? {} : { execution: report.execution }),
     markdown: lines.join('\n'),
     reportJson: canonicalJson(report),
   }
