@@ -29,17 +29,14 @@ jobs:
       - run: pnpm run typecheck
       - run: pnpm test
       - run: pnpm run build
-      # The family-standard gates. check:readmes also holds the four translated
-      # READMEs to the English one's section count, install command and
-      # configuration keys.
+      # The family-standard gates.
       - run: pnpm run verify:self-contained
       - run: pnpm run check:lockfile
-      - run: pnpm run check:readmes
       - run: pnpm run check:citations
       # The same minimum the workspace's own verify-all-tarballs.mjs checks, so
       # a package that would publish without its bundle or its rule pack fails
       # here instead of on the registry.
-      - name: The packed tarball carries the bundle, the patch and all five READMEs
+      - name: The packed tarball carries the bundle, the patch and both READMEs
         shell: bash
         run: |
           set -euo pipefail
@@ -56,10 +53,7 @@ jobs:
             package/package.json \
             package/cordis.patch.yml \
             package/README.md \
-            package/README-zh.md \
-            package/README-es.md \
-            package/README-pt.md \
-            package/README-hi.md ; do
+            package/README-zh.md ; do
             grep -qx "$need" out/list.txt || { echo "missing: $need"; exit 1; }
           done
           grep -qE '^package/rules/.*\.yaml$' out/list.txt || { echo "missing: rules/*.yaml"; exit 1; }

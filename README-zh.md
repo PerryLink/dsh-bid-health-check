@@ -1,6 +1,15 @@
 # dsh-bid-health-check — 投标响应健康度核对
 
-[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+### 快速试跑（1 分钟）
+
+```bash
+node samples/quickstart/run.mjs --check
+```
+
+样例在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`；截图见 `docs/assets/quickstart.png`。
+
+
+[English](README.md) · [简体中文](README-zh.md)
 
 <!-- topblock:v1 -->
 > **这是什么**　把一份投标文件和一份要求清单对起来，告诉你哪些要求有响应、哪些没有、哪些根本定位不到。
