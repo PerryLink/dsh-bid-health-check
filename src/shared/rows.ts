@@ -2174,6 +2174,13 @@ export function runTableCheck(input: TableInput, ruleset: Ruleset, options: Tabl
 
   const total = ruleset.rules.length
   const executed = ran.size
+  // Rules whose check kind has no engine implementation are named in `skipped`
+  // with an explicit reason. Count them separately so "skipped" means "could not
+  // run for lack of data" and "unsupported" means "this engine has no such
+  // check", instead of collapsing both into a single number.
+  const unsupported = [...reasons.values()].filter(
+    (reason) => reason.includes('不是本引擎支持的检查类型') || reason.includes('规则库未配置 check.kind'),
+  ).length
   return {
     plugin: options.plugin,
     target: input.target,
@@ -2182,6 +2189,6 @@ export function runTableCheck(input: TableInput, ruleset: Ruleset, options: Tabl
     summary,
     issues,
     skipped,
-    execution: { total, executed, skipped: Math.max(0, total - executed), manual: 0, unsupported: 0 },
+    execution: { total, executed, skipped: Math.max(0, total - executed - unsupported), manual: 0, unsupported },
   }
 }
