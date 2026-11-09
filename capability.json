@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "tier": "L2-document",
+  "input_formats": [
+    "docx",
+    "json"
+  ],
+  "outputs": [
+    "markdown",
+    "json"
+  ],
+  "rules": {
+    "total": 0
+  },
+  "limits": [
+    "工具型包：用 RequirementsPack 做词面定位，不是规则检查器",
+    "无真实投标文件 P/R"
+  ]
+}

@@ -25,7 +25,11 @@
     "icon.svg",
     "rules",
     "CHANGELOG.md",
-    "SECURITY.md"
+    "SECURITY.md",
+    "samples",
+    "TROUBLESHOOTING.md",
+    "screenshots.json",
+    "capability.json"
   ],
   "scripts": {
     "build": "tsdown",
@@ -42,6 +46,19 @@
     "manifestVersion": 1,
     "bundle": {
       "patch": "./cordis.patch.yml"
+    },
+    "demo": {
+      "sample": "samples/quickstart/input/bid-sample.docx",
+      "prompt": "用自带样例跑一次投标响应定位，告诉我多少条要求定位到了、多少条可疑、多少条定位不到。",
+      "expect": "samples/quickstart/expected/result.json",
+      "screenshot": "docs/assets/quickstart.png",
+      "reads": [
+        "投标文件 .docx",
+        "RequirementsPack（samples/quickstart/input/pack.json）"
+      ],
+      "writes": [],
+      "network": false,
+      "external": []
     }
   },
   "keywords": [
