@@ -53,7 +53,10 @@ jobs:
             package/package.json \
             package/cordis.patch.yml \
             package/README.md \
-            package/README-zh.md ; do
+            package/README.en.md \
+            package/README.es.md \
+            package/README.pt.md \
+            package/README.hi.md ; do
             grep -qx "$need" out/list.txt || { echo "missing: $need"; exit 1; }
           done
           grep -qE '^package/rules/.*\.yaml$' out/list.txt || { echo "missing: rules/*.yaml"; exit 1; }
