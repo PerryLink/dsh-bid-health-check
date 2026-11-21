@@ -45,6 +45,11 @@ Hay exactamente dos entradas: la lista de requisitos `pack` (JSON, o YAML con un
   <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="Estructura: el canal RequirementsPack y el canal de párrafos de la oferta confluyen en una medida de subcadena común: menos de 4 caracteres vuelve a la cita, 5 localiza y el empate toma el párrafo más largo; título, solo cita y cláusula de rechazo se topan en weak; la cola C se desvía a blockedByPack.">
 </picture>
 
+![dsh-bid-health-check: ejecución real de terminal](docs/assets/dsh-bid-health-check-demo.gif)
+
+*Repetición animada de una ejecución real registrada en este repositorio.*
+
+
 ## Instalación en tres pasos
 
 1. **Instalar** (elige un canal):

@@ -45,6 +45,11 @@ There are exactly two inputs: the requirements list `pack` (JSON, or YAML with a
   <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="Structure: the RequirementsPack channel and the bid-paragraph channel merge into one longest-common-substring measure — under 4 characters falls back to the quote, 5 locates, ties take the longer paragraph; heading, quote-only and reject-clause matches cap at weak; tier C bypasses to blockedByPack and is never graded.">
 </picture>
 
+![dsh-bid-health-check: real terminal run](docs/assets/dsh-bid-health-check-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
+
 ## Three-step setup
 
 1. **Install** (pick one channel):

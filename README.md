@@ -34,6 +34,10 @@ dsh plugin --profile <name> add dsh-bid-health-check
 
 ## 它是什么
 
+![dsh-bid-health-check 真实终端运行](docs/assets/dsh-bid-health-check-demo.gif)
+
+*本仓库一次真实运行的动图回放。*
+
 `dsh-bid-health-check` 读一份 `RequirementsPack`（由 `dsh-tender-requirements` 生成）和一份投标文件 `.docx`，逐条报告哪里看起来有响应、哪里匹配偏弱、哪里完全定位不到。
 
 这个问题的诚实形态比「投标文件完整吗」窄得多：工具能定位到一段看起来在回应要求的文字，或者定位不到；它不能判断那一段是否真的满足要求，更不能断言定位不到就等于没写。报告把「定位不到」单独成组，并在最前面写明这一区别——因为把「定位不到」当成「没写」，会让人去重写一段本来已经写在表格、附件或另一种措辞里的内容。

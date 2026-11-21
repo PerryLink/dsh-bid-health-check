@@ -45,6 +45,11 @@ dsh plugin --profile <name> add dsh-bid-health-check
   <img src="docs/assets/dsh-bid-health-check-flow-v5-light.svg" width="100%" alt="संरचना: RequirementsPack चैनल और बोली-अनुच्छेद चैनल एक साझा सबस्ट्रिंग माप में मिलते हैं — 4 अक्षर से कम होने पर उद्धरण पर लौटना, 5 पर स्थान मिलना, बराबरी पर लंबा अनुच्छेद; शीर्षक, केवल-उद्धरण और अस्वीकृति-अनुच्छेद weak पर सीमित; tier C blockedByPack की ओर बाईपास।">
 </picture>
 
+![dsh-bid-health-check का असली टर्मिनल रन](docs/assets/dsh-bid-health-check-demo.gif)
+
+*इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
+
+
 ## तीन चरणों में शुरुआत
 
 1. **इंस्टॉल** (कोई एक चैनल चुनें):
