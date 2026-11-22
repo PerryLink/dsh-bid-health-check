@@ -7,6 +7,8 @@
 
 # dsh-bid-health-check
 
+Current version `0.1.6`.
+
 **Match a bid back to its requirements, item by item — what looks answered, what is weak, and what could not be located, in one pass.**
 
 A purely local checker for bid writers and proposal teams: it reads a `RequirementsPack` and a `.docx`, reports three word-level states, and makes no compliance, liability, or replacement-for-a-reviewer claim.
