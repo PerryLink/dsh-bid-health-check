@@ -11,6 +11,8 @@
 
 面向投标专员与标书编制人的纯本地核对工具：读一份 `RequirementsPack` 和一份 `.docx`，按词面重合给出三种状态；不判合规、不认定责任、不替代人工复核。
 
+最近一次核验：DeepSeek Harness `dsh-v0.2.3-alpha.1`（2026-11-22）。
+
 [安装](#三步上手) · [配置](#配置) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -233,7 +235,7 @@ profile patch 覆盖示例：
 
 ## 生态与质量
 
-- [npm 包](https://www.npmjs.com/package/dsh-bid-health-check)（当前 `0.1.3`）
+- [npm 包](https://www.npmjs.com/package/dsh-bid-health-check)（当前 `0.1.5`）
 - [dshfind 插件页](https://dshfind.com/plugins/PerryLink/dsh-bid-health-check)（安装量与排名）
 - [OpenSSF Scorecard 报告](https://securityscorecards.dev/viewer/?uri=github.com/PerryLink/dsh-bid-health-check)（由 [.github/workflows/scorecard.yml](.github/workflows/scorecard.yml) 驱动）
 - [GitHub 仓库](https://github.com/PerryLink/dsh-bid-health-check)（唯一仓库）

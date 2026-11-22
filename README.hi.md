@@ -11,6 +11,8 @@
 
 बोली लिखने वालों के लिए पूरी तरह स्थानीय जाँच उपकरण: एक `RequirementsPack` और एक `.docx` पढ़ता है, शब्द-स्तर पर तीन स्थितियाँ बताता है, और अनुपालन, दायित्व या मानवीय समीक्षा का विकल्प होने का दावा नहीं करता।
 
+अंतिम सत्यापन: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [इंस्टॉल](#तीन-चरणों-में-शुरुआत) · [कॉन्फ़िगरेशन](#कॉन्फ़िगरेशन) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -48,7 +50,6 @@ dsh plugin --profile <name> add dsh-bid-health-check
 ![dsh-bid-health-check का असली टर्मिनल रन](docs/assets/dsh-bid-health-check-demo.gif)
 
 *इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
-
 
 ## तीन चरणों में शुरुआत
 
@@ -234,7 +235,7 @@ dsh plugin --profile <name> add dsh-bid-health-check
 
 ## इकोसिस्टम और गुणवत्ता
 
-- [npm पैकेज](https://www.npmjs.com/package/dsh-bid-health-check) (वर्तमान `0.1.3`)
+- [npm पैकेज](https://www.npmjs.com/package/dsh-bid-health-check) (वर्तमान `0.1.5`)
 - [dshfind प्लगइन पेज](https://dshfind.com/plugins/PerryLink/dsh-bid-health-check) (इंस्टॉल और रैंकिंग)
 - [OpenSSF Scorecard रिपोर्ट](https://securityscorecards.dev/viewer/?uri=github.com/PerryLink/dsh-bid-health-check) ([.github/workflows/scorecard.yml](.github/workflows/scorecard.yml) द्वारा संचालित)
 - [GitHub रेपो](https://github.com/PerryLink/dsh-bid-health-check) (आधिकारिक)

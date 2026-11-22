@@ -11,6 +11,8 @@
 
 Um verificador puramente local para redatores de propostas: lê um `RequirementsPack` e um `.docx`, informa três estados no nível do texto e não emite juízo de conformidade, responsabilidade ou substituição da revisão humana.
 
+Última verificação: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Instalação](#instalação-em-três-passos) · [Configuração](#configuração) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -48,7 +50,6 @@ Há exatamente duas entradas: a lista de requisitos `pack` (JSON, ou YAML com um
 ![dsh-bid-health-check: execução real de terminal](docs/assets/dsh-bid-health-check-demo.gif)
 
 *Repetição animada de uma execução real registrada neste repositório.*
-
 
 ## Instalação em três passos
 
@@ -234,7 +235,7 @@ Evidência estática: `src/index.ts:12` (`inject`), `src/index.ts:24-88` (a úni
 
 ## Ecossistema e qualidade
 
-- [Pacote npm](https://www.npmjs.com/package/dsh-bid-health-check) (atualmente `0.1.3`)
+- [Pacote npm](https://www.npmjs.com/package/dsh-bid-health-check) (atualmente `0.1.5`)
 - [Página no dshfind](https://dshfind.com/plugins/PerryLink/dsh-bid-health-check) (instalações e ranking)
 - [Relatório OpenSSF Scorecard](https://securityscorecards.dev/viewer/?uri=github.com/PerryLink/dsh-bid-health-check) (gerado por [.github/workflows/scorecard.yml](.github/workflows/scorecard.yml))
 - [Repositório GitHub](https://github.com/PerryLink/dsh-bid-health-check) (canônico)

@@ -11,6 +11,8 @@
 
 A purely local checker for bid writers and proposal teams: it reads a `RequirementsPack` and a `.docx`, reports three word-level states, and makes no compliance, liability, or replacement-for-a-reviewer claim.
 
+Last verified on DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Install](#three-step-setup) · [Configuration](#configuration) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -48,7 +50,6 @@ There are exactly two inputs: the requirements list `pack` (JSON, or YAML with a
 ![dsh-bid-health-check: real terminal run](docs/assets/dsh-bid-health-check-demo.gif)
 
 *Animated replay of a real run recorded in this repository.*
-
 
 ## Three-step setup
 
@@ -234,7 +235,7 @@ Static evidence: `src/index.ts:12` (`inject`), `src/index.ts:24-88` (the only re
 
 ## Ecosystem & quality
 
-- [npm package](https://www.npmjs.com/package/dsh-bid-health-check) (currently `0.1.3`)
+- [npm package](https://www.npmjs.com/package/dsh-bid-health-check) (currently `0.1.5`)
 - [dshfind plugin page](https://dshfind.com/plugins/PerryLink/dsh-bid-health-check) (installs and ranking)
 - [OpenSSF Scorecard report](https://securityscorecards.dev/viewer/?uri=github.com/PerryLink/dsh-bid-health-check) (driven by [.github/workflows/scorecard.yml](.github/workflows/scorecard.yml))
 - [GitHub repository](https://github.com/PerryLink/dsh-bid-health-check) (canonical)
